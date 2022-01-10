@@ -226,7 +226,7 @@
                 {{ form | payment_button }}
               {% endif %}
             {% else %} 
-              <a href='{{affiliateLink}}' target="_blank" rel="noopener noreferrer" class="btn {{ btn_class }}{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary{% endif %}">SEE ON AMAZON</a>            
+              <a href='{{affiliateLink}}' target="_blank" rel="noopener noreferrer" class="btn {{ btn_class }}{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary{% endif %}">{{customizations.affiliate_page.amazon_btn}}</a>            
             {% endunless %}
           {% endform %}
 

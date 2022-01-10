@@ -315,5 +315,15 @@
       "print": "Print",
       "add_to_apple_wallet": "Add to Apple Wallet"
     }
+  },
+  "customizations": {
+    "wholesale": {
+      "website": "Business Website",
+      "business_name": "Company",
+      "business_type": "Type of Business"
+    },
+    "affiliate_page": {
+      "amazon_btn": "Find on Amazon"
+    }
   }
 }

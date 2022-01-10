@@ -22,12 +22,12 @@
       <input type="tel" id="ContactFormPhone" name="contact[{{ 'contact.form.phone' | t }}]" placeholder="{{ 'contact.form.phone' | t }}" pattern="[0-9\-]*" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
 
       {% assign name_attr = 'contact.form.business-name' | t | handle %}
-      <label for="ContactFormBusinessName" class="label--hidden">Business Name</label>
+      <label for="ContactFormBusinessName" class="label--hidden">{{ customizations.wholesale.business_name | t }}</label>
       <input type="text" id="ContactFormPhone" name="contact[{{ 'contact.form.business-name' | t }}]" placeholder="Business Name">
       
       {% unless section.settings.businessTypes == blank %}
         {% assign business-types = section.settings.businessTypes | split: ',' %}      
-        <label for="ContactFormTypeOfBusiness" class="label--hidden">Type of Business</label>
+        <label for="ContactFormTypeOfBusiness" class="label--hidden">{{ customizations.wholesale.business_type | t }}</label>
         <select id="ContactFormTypeOfBusiness" name="contact[Type of Business]">
             {% for type in business-types %}
                 <option value="{{type}}">{{type}}</option>          
@@ -36,7 +36,7 @@
       {% endunless %}
 
       {% assign name_attr = 'contact.form.website' | t | handle %}
-      <label for="ContactFormWebsite" class="label--hidden">Website</label>
+      <label for="ContactFormWebsite" class="label--hidden">{{ customizations.wholesale.website | t }}</label>
       <input type="text" id="ContactFormWebsite" name="contact[{{ 'contact.form.website' | t }}]" placeholder="Website">
       
       {% if section.settings.isOrderNumberEnabled %}
