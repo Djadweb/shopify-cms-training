@@ -161,7 +161,8 @@
 
         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           {% assign variant = product.selected_or_first_available_variant %}
-            <p>⭐⭐⭐⭐⭐</p>
+          <!-- Stars -->
+          {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false %}
           <meta itemprop="priceCurrency" content="{{ cart.currency.iso_code }}">
           <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 
@@ -267,7 +268,9 @@
       </div>
     </div>
   </div>
+  {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false %}
 </div>
+
 
 {% unless product == empty %}
   <script type="application/json" id="ProductJson-{{ section.id }}">
