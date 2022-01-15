@@ -243,13 +243,7 @@
               </ul>
               <div id="description" class="tab-switch__content" data-content="description">
                 <div class="product-description rte" itemprop="description">
-                  {{ product.description }}
-
-                  <!-- Product Metafield -->                  
-                  <br>
-                  {{ product.metafields.test.mysection }}
-                  <br>
-                  
+                  {{ product.description }}                  
                 </div>
               </div>              
               <br>
@@ -262,6 +256,11 @@
           {% else %}
             <div class="product-description rte" itemprop="description">
               {{ product.description }}
+
+              <!-- Product Metafield -->                  
+              <br>                  
+              <div style="color: red;font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ product.metafields.test.mysection }}</div>
+              <br>
             </div>
           {% endunless %}
 
