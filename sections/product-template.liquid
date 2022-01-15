@@ -244,8 +244,15 @@
               <div id="description" class="tab-switch__content" data-content="description">
                 <div class="product-description rte" itemprop="description">
                   {{ product.description }}
+
+                  <!-- Product Metafield -->                  
+                  <br>
+                  {{ product.metafields.test.mysection }}
+                  <br>
+                  
                 </div>
-              </div>
+              </div>              
+              <br>
               <div id="extra" class="tab-switch__content" data-content="extra">
                 <div class="rte">
                   {{ pages[section.settings.extra_tab_content].content }}
